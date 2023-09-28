@@ -1,3 +1,9 @@
+var origin = "bongo.cat.unblocked"
+fetch(origin+"/test").then(() => {
+  if(location.origin !== origin){
+    location.href = origin + location.pathname
+  }
+})
 if (!window.console) console = {log: function() {}};
 
 var lowLag = new function(){
